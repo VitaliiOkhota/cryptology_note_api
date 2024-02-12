@@ -55,6 +55,12 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Step 4 (SWAGER Documentation)
+http://localhost:3000/docs
+
+## Step 5 (Launch pgAdmin4)
+http://localhost:5555
+
 ## Stay in touch
 
 - Author - Vitalii Okhota
