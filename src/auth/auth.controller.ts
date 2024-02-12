@@ -23,7 +23,7 @@ export class AuthController {
   @UsePipes(ValidationPipe)
   @HttpCode(200)
   @ApiBody({type: AuthDto})
-  @ApiCreatedResponse({
+  @ApiOkResponse({
     status: 200,
     description: 'Registration of a new user was successful.',
     type: AuthResponse

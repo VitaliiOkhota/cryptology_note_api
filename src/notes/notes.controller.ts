@@ -6,8 +6,6 @@ import {CurrentUser} from '../auth/decorators/user.decorator';
 import {
   ApiBadRequestResponse,
   ApiBody,
-  ApiCreatedResponse,
-  ApiFoundResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
   ApiOperation,
@@ -26,7 +24,7 @@ export class NotesController {
   @Post()
   @UsePipes(ValidationPipe)
   @Auth()
-  @ApiCreatedResponse({
+  @ApiOkResponse({
     status: 200,
     description: 'New note created successfully.',
     type: NoteEntity
@@ -54,7 +52,7 @@ export class NotesController {
 
   @Get()
   @Auth()
-  @ApiFoundResponse({
+  @ApiOkResponse({
     status: 200,
     description: 'Successfully retrieved all notes of the current user',
     type: [NoteEntity]
@@ -82,7 +80,7 @@ export class NotesController {
 
   @Get(':id')
   @Auth()
-  @ApiFoundResponse({
+  @ApiOkResponse({
     status: 200,
     description: 'Successfully retrieved the note by its id.',
     type: NoteEntity
